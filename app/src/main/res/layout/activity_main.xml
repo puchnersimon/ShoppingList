@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
@@ -12,18 +13,32 @@
         android:hint="Enter List"
         android:inputType="text" />
 
-    <Button
-        android:id="@+id/btnAdd"
+    <ImageButton
+        android:id="@+id/imageButton5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:scaleX="0.85"
+        android:scaleY="0.85"
+        android:translationY="30dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/shoppingcar" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="237dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/editText"
-        android:text="Add List" />
+        android:background="@drawable/shoppingcar"
+        android:translationX="80dp"
+        android:translationY="-4dp" />
 
     <ListView
         android:id="@+id/listView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnAdd"
-        android:background="#CECFCF" />
+        android:background="#CECFCF">
+
+    </ListView>
 
 </RelativeLayout>

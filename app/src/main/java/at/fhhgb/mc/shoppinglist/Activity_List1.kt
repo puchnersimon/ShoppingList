@@ -25,7 +25,7 @@ class Activity_List1 : AppCompatActivity() {
         }
     }
 
-    //tetsttststtstststss
+
 
 
 

@@ -23,6 +23,15 @@ class MainActivity : Activity() {
         }
     }
 
+    /*
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText"
+        android:text="Add List" />
+     */
+
     var listsize: Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
