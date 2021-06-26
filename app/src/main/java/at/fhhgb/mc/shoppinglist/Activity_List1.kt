@@ -25,6 +25,10 @@ class Activity_List1 : AppCompatActivity() {
         }
     }
 
+    //tetsttststtstststss
+
+
+
     var listsize: Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
