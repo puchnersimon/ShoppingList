@@ -7,7 +7,7 @@ import android.widget.AdapterView.OnItemClickListener
 import androidx.appcompat.app.AppCompatActivity
 
 
-class Activity_List2 : AppCompatActivity() {
+class Activity_List4 : AppCompatActivity() {
     lateinit var editText: EditText
     lateinit var editNumber: EditText
     lateinit var buttonAdd: Button
@@ -34,7 +34,7 @@ class Activity_List2 : AppCompatActivity() {
         val intent = getIntent()
         val name = intent.getStringExtra("Name")
         title = name
-
+        
         listView = findViewById(R.id.listView)
         editText = findViewById(R.id.editText)
         editNumber = findViewById(R.id.editNumber)
@@ -83,18 +83,18 @@ class Activity_List2 : AppCompatActivity() {
 
     //save data when app is closed
     private fun saveProducts() {
-        val sharedPreferences = getSharedPreferences("sharedPreferencesList2", Context.MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("sharedPreferencesList4", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.apply {
-            putString("STRING_KEY_LIST2", list.toString())
+            putString("STRING_KEY_LIST4", list.toString())
         }.apply()
     }
 
     //load data when app is opened again
     private fun loadProducts() {
         list.removeAll(list)
-        val sharedPreferences = getSharedPreferences("sharedPreferencesList2", Context.MODE_PRIVATE)
-        var savedstring = sharedPreferences.getString("STRING_KEY_LIST2", null)
+        val sharedPreferences = getSharedPreferences("sharedPreferencesList4", Context.MODE_PRIVATE)
+        var savedstring = sharedPreferences.getString("STRING_KEY_LIST4", null)
         if (savedstring != null) {
             savedstring = savedstring.replace("[", "")
             savedstring = savedstring.replace("]", "")

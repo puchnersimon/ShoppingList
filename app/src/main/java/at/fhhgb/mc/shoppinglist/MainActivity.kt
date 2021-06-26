@@ -69,16 +69,36 @@ class MainActivity : Activity() {
                         startActivity(intent2)
                     }
                 }
+
+                if (position == 2) {
+                    var name3 = listView.getItemAtPosition(position).toString()
+                    val intent3 = Intent(this, Activity_List3::class.java)
+                    intent3.putExtra("Name", name3)
+                    if (name3 != null) {
+                        startActivity(intent3)
+                    }
+                }
+
+                if (position == 3) {
+                    var name4 = listView.getItemAtPosition(position).toString()
+                    val intent4 = Intent(this, Activity_List4::class.java)
+                    intent4.putExtra("Name", name4)
+                    if (name4 != null) {
+                        startActivity(intent4)
+                    }
+                }
             }
     }
 
     //save data when app is closed
     private fun saveProducts() {
+        if (list.isNotEmpty()) {
         val sharedPreferences = this.getSharedPreferences("sharedPrefListsFile", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
-        editor.apply {
-            putString("STRING_KEY_LISTS", list.toString())
-        }.apply()
+            editor.apply {
+                putString("STRING_KEY_LISTS", list.toString())
+            }.apply()
+        }
     }
 
     //load data when app is opened again
@@ -90,7 +110,7 @@ class MainActivity : Activity() {
             savedLists = savedLists.replace("[", "")
             savedLists = savedLists.replace("]", "")
 
-            val array: List<String> = savedLists!!.split(",")
+            val array: List<String> = savedLists!!.split(", ")
             for (i in array.indices) {
                 list.add(array[i])
             }

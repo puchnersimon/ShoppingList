@@ -47,7 +47,12 @@ class ListViewAdapter extends ArrayAdapter<String> {
                     if (position == 1) {
                         Activity_List2.removeItem(position);
                     }
-
+                    if (position == 2) {
+                        Activity_List3.removeItem(position);
+                    }
+                    if (position == 3) {
+                        Activity_List4.removeItem(position);
+                    }
                 }
             });
         }

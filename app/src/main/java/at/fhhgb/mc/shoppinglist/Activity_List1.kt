@@ -100,8 +100,7 @@ class Activity_List1 : AppCompatActivity() {
             savedstring = savedstring.replace("[", "")
             savedstring = savedstring.replace("]", "")
 
-
-        val array: List<String> = savedstring!!.split(",")
+        val array: List<String> = savedstring!!.split(", ")
         for (i in array.indices) {
             list.add(array[i])
         }
