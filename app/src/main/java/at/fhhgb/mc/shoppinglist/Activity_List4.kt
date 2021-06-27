@@ -108,5 +108,25 @@ class Activity_List4 : AppCompatActivity() {
         listView.adapter = arrayAdapter
         }
     }
+
+    override fun onPause() {
+        super.onPause()
+        saveProducts()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        loadProducts()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        saveProducts()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        loadProducts()
+    }
 }
 
