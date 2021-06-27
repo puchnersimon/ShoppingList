@@ -41,18 +41,7 @@ class ListViewAdapter extends ArrayAdapter<String> {
             remove.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(position == 0) {
-                        Activity_List1.removeItem(position);
-                    }
-                    if (position == 1) {
-                        Activity_List2.removeItem(position);
-                    }
-                    if (position == 2) {
-                        Activity_List3.removeItem(position);
-                    }
-                    if (position == 3) {
-                        Activity_List4.removeItem(position);
-                    }
+                    Activity_List1.removeItem(position);
                 }
             });
         }

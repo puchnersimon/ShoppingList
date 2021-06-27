@@ -15,7 +15,7 @@ class Activity_List4 : AppCompatActivity() {
     companion object {
         lateinit var listView: ListView
         var list: ArrayList<String> = ArrayList()
-        private lateinit var arrayAdapter: ListViewAdapter
+        private lateinit var arrayAdapter: ListViewAdapter4
 
         //remove Item with check-button
         @JvmStatic
@@ -40,7 +40,7 @@ class Activity_List4 : AppCompatActivity() {
         editNumber = findViewById(R.id.editNumber)
         buttonAdd = findViewById(R.id.btnAdd)
         buttonRemove = findViewById(R.id.btnRemove)
-        arrayAdapter = ListViewAdapter(this, list)
+        arrayAdapter = ListViewAdapter4(this, list)
 
         loadProducts()
 
